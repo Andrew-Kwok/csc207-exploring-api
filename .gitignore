@@ -1,5 +1,9 @@
 # IntelliJ IDEA
 .idea/
+.idea_modules/
+*.iws
+*.iml
+*.ipr
 
 # Compiled class files
 *.class
@@ -10,10 +14,8 @@
 # Bytecode directories
 out/
 build/
-
-# IDE-specific files
-*.iml
-.idea_modules/
+!**/src/main/**/build/
+!**/src/test/**/build/
 
 # User-specific files
 *.DS_Store
@@ -42,15 +44,6 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
-*.iws
-*.iml
-*.ipr
-
 ### Eclipse ###
 .apt_generated
 .classpath
@@ -66,9 +59,6 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
 
 ### VS Code ###
 .vscode/
