@@ -1,8 +1,22 @@
-# Compiled class file
+# IntelliJ IDEA
+.idea/
+
+# Compiled class files
 *.class
 
-# Log file
+# Log files
 *.log
+
+# Bytecode directories
+out/
+build/
+
+# IDE-specific files
+*.iml
+.idea_modules/
+
+# User-specific files
+*.DS_Store
 
 # BlueJ files
 *.ctxt
