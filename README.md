@@ -1,1 +1,1 @@
-# csc207-exploring-api
+# csc207 exploring api
