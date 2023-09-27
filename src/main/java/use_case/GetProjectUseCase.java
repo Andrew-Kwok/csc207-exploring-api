@@ -9,4 +9,8 @@ public final class GetProjectUseCase {
     public GetProjectUseCase(TodoDB todoDB) {
         this.todoDB = todoDB;
     }
+
+    public Project getProject(String projectID){
+        return todoDB.getProject(projectID);
+    }
 }

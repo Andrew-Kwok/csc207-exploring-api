@@ -2,6 +2,7 @@ package app;
 
 import api.TodoDB;
 import api.MongoTodoDB;
+import entity.Project;
 import use_case.*;
 
 public class Main {
@@ -9,8 +10,17 @@ public class Main {
 
     public static void main(String[] args) {
         final TodoDB todoDB = new MongoTodoDB();
+        String[] defaultProjects = {
+                "2320965992",
+                "2320965999",
+                "2320966000"
+        };
         GetProjectUseCase demoCase1 = new GetProjectUseCase(todoDB);
 
+        for(String projectID: defaultProjects){
+            Project project =demoCase1.getProject(projectID);
+            System.out.println(project);
+        }
 
     }
 }

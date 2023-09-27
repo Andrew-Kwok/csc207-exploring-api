@@ -26,16 +26,14 @@ public class MongoTodoDB implements TodoDB {
                 .build();
         try {
             Response response = client.newCall(request).execute();
-            System.out.println(response);
-            JSONObject responseBody = new JSONObject(response.body().string());
-
-            if (responseBody.getInt("status_code") == 200) {
+            if(response.code()==200){
+                JSONObject responseBody = new JSONObject(response.body().string());
                 return Project.builder()
                         .projectID(responseBody.getString("id"))
                         .projectName(responseBody.getString("name"))
                         .build();
             } else {
-                throw new RuntimeException(responseBody.getString("message"));
+                throw new RuntimeException("error");
             }
         } catch (IOException | JSONException e) {
             throw new RuntimeException(e);
