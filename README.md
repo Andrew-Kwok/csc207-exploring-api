@@ -1,1 +1,1 @@
-# csc207 exploring api
+# CSC207 Group Project: Exploring API
